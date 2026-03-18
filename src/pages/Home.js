@@ -42,12 +42,8 @@ function Home() {
         <div className="home-buttons">
 
           <Link to="/projects">
-            <button className="btn primary">View Projects</button>
+            <button className="btn view_project">View Projects</button>
           </Link>
-
-          <a href="/resume.pdf" download>
-            <button className="btn secondary">Download Resume</button>
-          </a>
 
         </div>
 

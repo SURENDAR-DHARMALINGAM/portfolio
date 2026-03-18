@@ -71,9 +71,6 @@ body {
 
 .home-buttons {
   margin-top: 25px;
-  display: flex;
-  gap: 15px;
-  flex-wrap: wrap;
 }
 
 .btn {
@@ -85,26 +82,14 @@ body {
 }
 
 
-.primary {
+.view_project {
   background: #b5a33b;
   color: rgb(255, 255, 255);
 }
 
-.primary:hover {
-  background: #3258c9;
+.view_project:hover {
+  background: linear-gradient(100deg, #0d3f9d,#ffd43b);
   transform: translateY(-2px);
-}
-
-
-.secondary {
-  background: rgb(255, 255, 255);
-  border: 1px solid #3258c9;
-  color: #000000;
-}
-
-.secondary:hover {
-  background: #3258c9;
-  color: white;
 }
 
 
