@@ -1,0 +1,164 @@
+.about-container {
+  padding: 60px 80px;
+  font-family: "Segoe UI", sans-serif;
+  min-height: 100vh;
+  background: linear-gradient(80deg, #87c8d0, #B2B5E0);
+}
+
+.about-section,
+.skills-section,
+.education-section,
+.why-section {
+  margin-bottom: 60px;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  font-size: 32px;
+}
+
+
+.about-section {
+  text-align: center;
+  max-width: 800px;
+  margin: auto;
+}
+
+.about-section p {
+  margin-bottom: 15px;
+  line-height: 1.7;
+  font-size: 20px;
+}
+
+.about-section span {
+  color: #043082;
+  font-weight: 800;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 35px;
+}
+
+.skill-card {
+  padding: 14px;
+  background: #111;
+  color: white;
+  text-align: center;
+  border-radius: 10px;
+
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.skill-card:hover {
+  transform: translateY(-5px) scale(1.05);
+  background: linear-gradient(10deg, #306998,#ffd43b);
+}
+
+.education-section {
+  text-align: center;
+}
+
+.education-grid{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+.education-card {
+  padding: 14px;
+  background: #ffffff;
+  color: rgb(0, 0, 0);
+  text-align: center;
+  border-radius: 10px;
+
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.education-card:hover{
+  transform: translateY(-5px) scale(1.05);
+  background: linear-gradient(10deg, #306998,#ffd43b);
+}
+
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.why-card {
+  padding: 20px;
+  border-radius: 12px;
+  background: white;
+
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+.why-card:hover {
+  transform: translateY(-6px);
+  background: linear-gradient(10deg, #306998,#ffd43b);
+}
+
+
+
+@media (max-width: 768px) {
+
+  .about-container {
+    padding: 30px 20px;
+  }
+
+  h2 {
+    font-size: 24px;
+    font-family:'Times New Roman', Times, serif;
+  }
+
+  .about-section {
+    text-align: center;
+  }
+
+  .about-section p{
+    font-size: 15px;
+  }
+
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .why-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .education-card {
+    width: 100%;
+  }
+
+}
+
+
+
+@media (min-width: 769px) and (max-width: 1024px) {
+
+  .about-container {
+    padding: 40px;
+  }
+
+  .skills-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .why-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .about-section p{
+    font-size: 15px;
+  }
+
+}

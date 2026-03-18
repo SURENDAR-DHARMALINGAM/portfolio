@@ -1,0 +1,180 @@
+body {
+  background: linear-gradient(80deg, #87c8d0, #B2B5E0);
+}
+
+.home-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 60px 80px;
+  min-height: 100vh;
+  gap: 40px;
+}
+
+.home-left {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.profile-img {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  object-fit: cover;
+
+  box-shadow: 0 15px 50px rgba(0,0,0,0.25);
+  transition: all 0.4s ease;
+}
+
+.profile-img:hover {
+  transform: scale(1.07);
+}
+
+.home-right {
+  flex: 1.5;
+  padding: 10px 10px;
+  display: flex;
+  flex-direction: column;
+  align-items:baseline
+}
+
+.hi{
+  font-size: 50px;
+  font-style: italic;
+}
+
+.name{
+  font-size: 70px;
+  font-style: italic;
+  font-weight:750px;
+  background: linear-gradient(10deg, #306998,#ffd43b);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.python{
+  font-size: 70px;
+  font-style: italic;
+  font-weight:750px;
+  background: linear-gradient(10deg, #0d3f9d,#ffd43b);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.developer{
+  font-size: 50px;
+  font-style: italic;
+  -webkit-text-fill-color:#043082;
+}
+
+
+.home-buttons {
+  margin-top: 25px;
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  padding: 12px 22px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  font-size: 15px;
+}
+
+
+.primary {
+  background: #b5a33b;
+  color: rgb(255, 255, 255);
+}
+
+.primary:hover {
+  background: #3258c9;
+  transform: translateY(-2px);
+}
+
+
+.secondary {
+  background: rgb(255, 255, 255);
+  border: 1px solid #3258c9;
+  color: #000000;
+}
+
+.secondary:hover {
+  background: #3258c9;
+  color: white;
+}
+
+
+
+
+@media (max-width: 768px) {
+
+  .home-container {
+    flex-direction: column;
+    text-align: center;
+    padding: 25px 20px;
+    gap: 25px;
+  }
+
+  .home-left {
+    order: 1;
+  }
+
+  .home-right {
+    order: 2;
+    padding: 0;
+  }
+
+  .profile-img {
+    width: 250px;
+    height: 250px;
+  }
+
+  .home-right h3 {
+    font-size: 24px;
+    margin-bottom: 5px;
+    font-weight: 900;
+  }
+
+
+
+  .home-buttons {
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 15px;
+  }
+
+  .btn {
+    width: 100%;
+    font-size: 14px;
+    padding: 12px;
+  }
+
+}
+
+
+
+
+@media (min-width: 769px) and (max-width: 1024px) {
+
+  .home-container {
+    padding: 40px;
+    gap: 30px;
+  }
+
+  .profile-img {
+    width: 250px;
+    height: 250px;
+  }
+
+  .home-right h3 {
+    font-size: 34px;
+    margin-bottom: 5px;
+    font-weight: 900;
+  }
+
+
+}

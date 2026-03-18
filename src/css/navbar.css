@@ -1,0 +1,159 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 50px;
+
+  background: #b5a33b;
+  backdrop-filter: blur(10px);
+
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  box-shadow: 0 6px 25px rgba(0,0,0,0.15);
+}
+
+
+.logo {
+  font-size: 28px;
+  font-weight: bold;
+  color: #f4f3f3;
+  letter-spacing: 1px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 30px;
+}
+
+
+.nav-links a {
+  text-decoration: none;
+  color: #f6f5f5;
+  font-weight: 500;
+  position: relative;
+  transition: 0.3s ease;
+  font-size: 15px;
+}
+
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background: #000000;
+  left: 0;
+  bottom: -5px;
+  transition: 0.3s ease;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+.nav-links a:hover {
+  color: #000000;
+}
+
+
+.hamburger {
+  display: none;
+  font-size: 26px;
+  cursor: pointer;
+  color: #fff;
+  transition: 0.3s;
+}
+
+.hamburger:hover {
+  transform: scale(1.1);
+}
+
+
+
+@media (max-width: 768px) {
+
+  .navbar {
+    padding: 10px 16px;
+  }
+
+  .logo {
+    font-size: 18px;
+    letter-spacing: 2px;
+  }
+
+  .hamburger {
+    display: block;
+    font-size: 26px;
+    cursor: pointer;
+    color: white;
+    transition: 0.3s ease;
+  }
+
+
+  .hamburger.active {
+    color: #000;  
+    transform: rotate(90deg);
+  }
+
+
+  .nav-links {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 100%;
+
+    flex-direction: column;
+    align-items: center;
+
+    background: #b5a33b;
+
+    max-height: 0;
+    overflow: hidden;
+
+    border-top: 2px solid rgba(0,0,0,0.2);
+
+    transition: max-height 0.4s ease, padding 0.3s ease;
+  }
+
+  .nav-links.active {
+    max-height: 400px;
+    padding: 10px 0;
+  }
+
+  .nav-links a {
+    width: 100%;
+    text-align: center;
+    padding: 12px 0;
+    font-size: 16px;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+  }
+
+
+  .nav-links a:active {
+    background: rgba(0,0,0,0.15);
+  }
+
+}
+
+
+
+@media (min-width: 769px) and (max-width: 1024px) {
+
+  .navbar {
+    padding: 14px 30px;
+  }
+
+  .logo {
+    font-size: 24px;
+  }
+
+  .nav-links {
+    gap: 18px;
+  }
+
+  .nav-links a {
+    font-size: 14px;
+  }
+
+}
