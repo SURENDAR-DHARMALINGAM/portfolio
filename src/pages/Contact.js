@@ -34,12 +34,12 @@ const handleSubmit = async (e) => {
 
   try {
 
-    await axios.post(
+    const response = await axios.post(
       "https://portfolio-backend-y883.onrender.com/api/contact/",
       formData
     );
 
-    alert("Message Sent Successfully!");
+    alert(response.data.message);
 
     setFormData({
       name: "",
@@ -49,12 +49,13 @@ const handleSubmit = async (e) => {
 
   } catch (error) {
 
-    alert("Something went wrong");
+    console.log(error.response);
+
+    alert("Error submitting form");
 
   }
 
 };
-
   return (
     <div className="contact-container">
 
