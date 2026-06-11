@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import Navbar from "./components/Navbar";
@@ -7,8 +7,27 @@ import About from "./pages/About";
 import Projects from "./pages/Projects";
 import Contact from "./pages/Contact";
 import Footer from "./components/Footer";
+import Preloader from "./components/Preloader";
+
+
 
 function App() {
+
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 3500);
+
+    return () => clearTimeout(timer);
+
+  }, []);
+
+  if (loading) {
+    return <Preloader />;
+  }
 
   return (
     <>
