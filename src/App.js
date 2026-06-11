@@ -8,6 +8,7 @@ import Projects from "./pages/Projects";
 import Contact from "./pages/Contact";
 import Footer from "./components/Footer";
 import Preloader from "./components/Preloader";
+import ScrollToTop from "./components/ScrollToTop";
 
 
 
@@ -32,6 +33,8 @@ function App() {
   return (
     <>
     <BrowserRouter>
+
+      <ScrollToTop />
 
       <Navbar />
 
