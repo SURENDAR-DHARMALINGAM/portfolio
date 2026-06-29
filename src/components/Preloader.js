@@ -16,12 +16,12 @@ function Preloader() {
 
       <div className="typing-container">
         <h2 className="typing-text">
-          Surendar Dharmalingam
+          Surendar Dharmalingam 
         </h2>
       </div>
 
       <p className="loading-text">
-        Python Full Stack Developer
+        CODE - CREATE - CONQUER
       </p>
 
     </div>

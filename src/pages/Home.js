@@ -1,13 +1,12 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { TypeAnimation } from "react-type-animation";
 import "../css/home.css";
 import { Link } from "react-router-dom";
-
 
 function Home() {
   return (
     <div className="home-container">
-
 
       <motion.div
         className="home-left"
@@ -16,12 +15,11 @@ function Home() {
         transition={{ duration: 1 }}
       >
         <img
-          src="/profile.jpg"   
+          src="/profile.jpg"
           alt="profile"
           className="profile-img"
         />
       </motion.div>
-
 
       <motion.div
         className="home-right"
@@ -30,19 +28,45 @@ function Home() {
         transition={{ duration: 1 }}
       >
 
-        <h3 className="hi">Hi, I'm</h3>
+        <h3 className="hi">Hi, I'm 👋</h3>
 
-        <h3 className="name">SURENDAR D</h3>
+        <h1 className="name">SURENDAR D</h1>
 
-        <h3 className="python">Python</h3>
+        <TypeAnimation
+          sequence={[
+            "🐍 Python Full Stack Developer",
+            2000,
 
-        <h3 className="developer">Full Stack Developer</h3>
+            "⚡ Django Developer",
+            2000,
 
+            "⚛️ React Developer",
+            2000,
+
+            "🔗 REST API Developer",
+            2000,
+
+            "💻 Backend Developer",
+            2000,
+          ]}
+          wrapper="h2"
+          speed={50}
+          repeat={Infinity}
+          className="typing-role"
+        />
+
+        <p className="home-description">
+          Passionate about building scalable web applications,
+          REST APIs, and modern user experiences using
+          Python, Django, React, and SQL.
+        </p>
 
         <div className="home-buttons">
 
           <Link to="/projects">
-            <button className="btn view_project">View Projects</button>
+            <button className="btn view_project">
+              🚀 View Projects
+            </button>
           </Link>
 
         </div>
