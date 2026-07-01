@@ -2,7 +2,7 @@
   padding: 60px 80px;
   font-family: "Segoe UI", sans-serif;
   min-height: 100vh;
-  background: linear-gradient(80deg, #87c8d0, #B2B5E0);
+  background: var(--body-bg);
 }
 
 .about-section,
@@ -16,8 +16,8 @@ h2 {
   text-align: center;
   margin-bottom: 25px;
   font-size: 32px;
+  color: var(--text-color);
 }
-
 
 .about-section {
   text-align: center;
@@ -29,10 +29,11 @@ h2 {
   margin-bottom: 15px;
   line-height: 1.7;
   font-size: 20px;
+  color: var(--secondary-text);
 }
 
 .about-section span {
-  color: #043082;
+  color: var(--primary-blue);
   font-weight: 800;
 }
 
@@ -44,46 +45,51 @@ h2 {
 
 .skill-card {
   padding: 14px;
-  background: #111;
-  color: white;
+  background: var(--card-bg);
+  color: var(--text-color);
   text-align: center;
   border-radius: 10px;
 
   transition: all 0.3s ease;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  box-shadow: 0 5px 15px var(--shadow);
+
+  border: 1px solid var(--border-color);
 }
 
 .skill-card:hover {
   transform: translateY(-5px) scale(1.05);
-  background: linear-gradient(10deg, #306998,#ffd43b);
+  background: linear-gradient(10deg, #306998, #ffd43b);
+  color: white;
 }
 
 .education-section {
   text-align: center;
 }
 
-.education-grid{
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 50px;
+.education-grid {
   display: flex;
   justify-content: center;
+  gap: 50px;
+  flex-wrap: wrap;
 }
 
 .education-card {
   padding: 14px;
-  background: #ffffff;
-  color: rgb(0, 0, 0);
+  background: var(--card-bg);
+  color: var(--text-color);
   text-align: center;
   border-radius: 10px;
 
   transition: all 0.3s ease;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  box-shadow: 0 5px 15px var(--shadow);
+
+  border: 1px solid var(--border-color);
 }
 
-.education-card:hover{
+.education-card:hover {
   transform: translateY(-5px) scale(1.05);
-  background: linear-gradient(10deg, #306998,#ffd43b);
+  background: linear-gradient(10deg, #306998, #ffd43b);
+  color: white;
 }
 
 .why-grid {
@@ -95,18 +101,21 @@ h2 {
 .why-card {
   padding: 20px;
   border-radius: 12px;
-  background: white;
+  background: var(--card-bg);
+
+  color: var(--text-color);
 
   transition: all 0.3s ease;
-  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+  box-shadow: 0 5px 20px var(--shadow);
+
+  border: 1px solid var(--border-color);
 }
 
 .why-card:hover {
   transform: translateY(-6px);
-  background: linear-gradient(10deg, #306998,#ffd43b);
+  background: linear-gradient(10deg, #306998, #ffd43b);
+  color: white;
 }
-
-
 
 @media (max-width: 768px) {
 
@@ -116,14 +125,14 @@ h2 {
 
   h2 {
     font-size: 24px;
-    font-family:'Times New Roman', Times, serif;
+    font-family: "Times New Roman", Times, serif;
   }
 
   .about-section {
     text-align: center;
   }
 
-  .about-section p{
+  .about-section p {
     font-size: 15px;
   }
 
@@ -135,13 +144,16 @@ h2 {
     grid-template-columns: 1fr;
   }
 
+  .education-grid {
+    flex-direction: column;
+    gap: 20px;
+  }
+
   .education-card {
     width: 100%;
   }
 
 }
-
-
 
 @media (min-width: 769px) and (max-width: 1024px) {
 
@@ -157,7 +169,7 @@ h2 {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .about-section p{
+  .about-section p {
     font-size: 15px;
   }
 
